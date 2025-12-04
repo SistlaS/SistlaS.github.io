@@ -9,6 +9,7 @@
 
     let currentIndex = 0;
     const totalSlides = 3;
+    let autoplayInterval;
 
     function updateCarousel(index) {
         // Update track position
@@ -39,14 +40,41 @@
         updateCarousel(newIndex);
     }
 
+    function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, 3000); // Change slide every 5 seconds
+    }
+
+    function stopAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+        }
+    }
+
+    function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+    }
+
     // Button click handlers
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+    }
 
     // Indicator click handlers
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             updateCarousel(index);
+            resetAutoplay();
         });
     });
 
@@ -61,14 +89,24 @@
         if (e.key === 'ArrowLeft') {
             e.preventDefault();
             prevSlide();
+            resetAutoplay();
         } else if (e.key === 'ArrowRight') {
             e.preventDefault();
             nextSlide();
+            resetAutoplay();
         }
     });
 
-    // Initialize first indicator
+    // Pause autoplay on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoplay);
+        carouselContainer.addEventListener('mouseleave', startAutoplay);
+    }
+
+    // Initialize first indicator and start autoplay
     updateCarousel(0);
+    startAutoplay();
 })();
 
 // Personal Carousel functionality
@@ -82,6 +120,7 @@
 
     let currentIndex = 0;
     const totalSlides = 6;
+    let autoplayInterval;
 
     function updateCarousel(index) {
         // Update track position
@@ -112,14 +151,41 @@
         updateCarousel(newIndex);
     }
 
+    function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, 3000); // Change slide every 5 seconds
+    }
+
+    function stopAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+        }
+    }
+
+    function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+    }
+
     // Button click handlers
-    prevBtn.addEventListener('click', prevSlide);
-    nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+    }
 
     // Indicator click handlers
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             updateCarousel(index);
+            resetAutoplay();
         });
     });
 
@@ -134,14 +200,135 @@
         if (e.key === 'ArrowLeft') {
             e.preventDefault();
             prevSlide();
+            resetAutoplay();
         } else if (e.key === 'ArrowRight') {
             e.preventDefault();
             nextSlide();
+            resetAutoplay();
         }
     });
 
-    // Initialize first indicator
+    // Pause autoplay on hover
+    const carouselContainer = document.querySelector('.carousel-container-personal');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoplay);
+        carouselContainer.addEventListener('mouseleave', startAutoplay);
+    }
+
+    // Initialize first indicator and start autoplay
     updateCarousel(0);
+    startAutoplay();
+})();
+
+// Community Carousel functionality
+(function initCommunityCarousel() {
+    const track = document.getElementById('carousel-track-community');
+    const prevBtn = document.getElementById('carousel-community-prev');
+    const nextBtn = document.getElementById('carousel-community-next');
+    const indicators = document.querySelectorAll('.carousel-indicator-community');
+
+    if (!track) return; // Exit if carousel doesn't exist
+
+    let currentIndex = 0;
+    const totalSlides = 2;
+    let autoplayInterval;
+
+    function updateCarousel(index) {
+        // Update track position
+        const offset = -index * 100;
+        track.style.transform = `translateX(${offset}%)`;
+
+        // Update indicators
+        indicators.forEach((indicator, i) => {
+            if (i === index) {
+                indicator.classList.add('!bg-white');
+                indicator.setAttribute('aria-selected', 'true');
+            } else {
+                indicator.classList.remove('!bg-white');
+                indicator.setAttribute('aria-selected', 'false');
+            }
+        });
+
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        const newIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel(newIndex);
+    }
+
+    function prevSlide() {
+        const newIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel(newIndex);
+    }
+
+    function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, 3000); // Change slide every 5 seconds
+    }
+
+    function stopAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+        }
+    }
+
+    function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+    }
+
+    // Button click handlers
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+    }
+
+    // Indicator click handlers
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            updateCarousel(index);
+            resetAutoplay();
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        // Only handle arrow keys when focus is in carousel
+        const carouselContainer = document.querySelector('.carousel-container-community');
+        if (!carouselContainer || !carouselContainer.contains(document.activeElement)) {
+            return;
+        }
+
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            prevSlide();
+            resetAutoplay();
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            nextSlide();
+            resetAutoplay();
+        }
+    });
+
+    // Pause autoplay on hover
+    const carouselContainer = document.querySelector('.carousel-container-community');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoplay);
+        carouselContainer.addEventListener('mouseleave', startAutoplay);
+    }
+
+    // Initialize first indicator and start autoplay
+    updateCarousel(0);
+    startAutoplay();
 })();
 
 // Accordion functionality
