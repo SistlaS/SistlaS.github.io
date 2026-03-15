@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soumya Sistla — Data Engineer & Researcher</title>
-    <meta name="description" content="Soumya Sistla's portfolio — MS in Data Engineering at UW–Madison, database systems researcher, 3 years industry experience.">
+    <title>Soumya Sistla | Software Engineer & Data Systems Researcher</title>
+    <meta name="description" content="Soumya Sistla — Software Engineer and MS student at UW–Madison specializing in database systems, distributed infrastructure, and data engineering. Published in ACM TODS. Dagstuhl alumna.">
+    <meta name="keywords" content="Soumya Sistla, software engineer, data systems, database research, UW Madison, distributed systems, query execution, ACM TODS, SpecScape, WiNGS Lab, Dagstuhl">
+    <link rel="canonical" href="https://sistlas.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Soumya Sistla | Software Engineer & Data Systems Researcher">
+    <meta property="og:description" content="Software Engineer and MS student at UW–Madison. Database systems researcher, published in ACM TODS. Building SpecScape at WiNGS Lab with Prof. Suman Banerjee.">
+    <meta property="og:url" content="https://sistlas.github.io/">
+    <meta property="og:image" content="https://sistlas.github.io/assets/profile.jpg">
+    <meta property="og:image:alt" content="Soumya Sistla profile photo">
+    <meta property="og:site_name" content="Soumya Sistla">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Soumya Sistla | Software Engineer & Data Systems Researcher">
+    <meta name="twitter:description" content="Software Engineer and MS student at UW–Madison. Database systems researcher, published in ACM TODS. Dagstuhl alumna.">
+    <meta name="twitter:image" content="https://sistlas.github.io/assets/profile.jpg">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -131,6 +148,28 @@
             max-height: 200px;
         }
     </style>
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Soumya Sistla",
+      "url": "https://sistlas.github.io/",
+      "image": "https://sistlas.github.io/assets/profile.jpg",
+      "jobTitle": "Software Engineer",
+      "description": "Software Engineer and MS student at UW–Madison specializing in database systems, distributed infrastructure, and data engineering.",
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of Wisconsin–Madison" },
+        { "@type": "CollegeOrUniversity", "name": "BITS Pilani, Hyderabad Campus" }
+      ],
+      "sameAs": [
+        "https://github.com/SistlaS",
+        "https://www.linkedin.com/in/soumya-sistla-ab01211b2/"
+      ],
+      "knowsAbout": ["Database Systems", "Distributed Systems", "Data Engineering", "Query Execution", "Software Engineering"]
+    }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JG3NDZHH98"></script>
     <script>
@@ -211,6 +250,12 @@
                             LinkedIn
                         </a>
                     </div>
+
+                    <!-- Hiring status -->
+                    <p class="mt-4 text-sm text-center font-medium text-emerald-700 flex items-center justify-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0"></span>
+                        Actively looking for full-time opportunities
+                    </p>
                 </div>
 
                 <!-- Right: Timeline -->
@@ -218,26 +263,41 @@
                     <h2 class="text-xl font-bold mb-4">My Story</h2>
 
                     <div class="space-y-2 flex-1">
+                        <!-- Standard item -->
                         <div class="timeline-item relative pl-4 pr-3 py-2 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
-                            <p class="text-sm text-neutral-700"><strong>2017–2021 · BITS Pilani, Hyd</strong> : Discovered my passion for Computer Science.</p>
+                            <p class="text-sm text-neutral-700"><strong>2021 · Graduated from BITS Pilani, Hyderabad</strong></p>
                         </div>
+                        <!-- Standard item -->
                         <div class="timeline-item relative pl-4 pr-3 py-2 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
-                            <p class="text-sm text-neutral-700"><strong>2021–2024 ·Software Engineer</strong> : Scaled and optimized pipelines for 8TB of biomedical data, cutting costs and powering research—where I found my passion for large-scale systems.</p>
+                            <p class="text-sm text-neutral-700"><strong>2021–2024 · Software Engineer</strong> — Scaled and optimized pipelines for 8TB of biomedical data, cutting costs and powering research—where I found my passion for large-scale systems.</p>
                         </div>
-                        <div class="timeline-item relative pl-4 pr-3 py-2 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
-                            <p class="text-sm text-neutral-700"><strong>2024–2026 (May) · MS in Data Engineering at UW–Madison</strong> : Specialized in distributed systems, database internals, and data engineering. Awarded a GHC scholarship.</p>
+                        <!-- Featured: Master's at UW–Madison -->
+                        <div class="timeline-item relative pl-4 pr-3 py-2.5 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
+                            <p class="text-xs font-medium text-neutral-400 leading-tight mb-0.5">September 2024</p>
+                            <p class="text-base font-semibold text-neutral-900">Master's at UW–Madison</p>
+                            <p class="text-sm text-neutral-600">Specialized in distributed systems, database internals, and data engineering. Awarded a GHC scholarship.</p>
                         </div>
-                        <div class="timeline-item relative pl-4 pr-3 py-2 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
-                            <p class="text-sm text-neutral-700"><strong>2024-25 · Database Systems Research</strong> : Worked on low-level query execution optimizations; published in ACM TODS.</p>
+                        <!-- Featured: Database Systems Research -->
+                        <div class="timeline-item relative pl-4 pr-3 py-2.5 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
+                            <p class="text-xs font-medium text-neutral-400 leading-tight mb-0.5">May 2025</p>
+                            <p class="text-base font-semibold text-neutral-900 mb-1">Database Systems Research</p>
+                            <p class="text-sm text-neutral-600">Worked on low-level query execution optimizations with Prof. Goetz Graefe; published in <a href="https://dl.acm.org/doi/10.1145/3778176" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-neutral-900 transition-colors">ACM TODS</a>.</p>
                         </div>
-                        <div class="timeline-item relative pl-4 pr-3 py-2 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
-                            <p class="text-sm text-neutral-700"><strong>2025 Summer · Dagstuhl, Germany</strong> :  Selected for the Dagstuhl Summer School on Data Management.</p>
+                        <!-- Featured: Dagstuhl -->
+                        <div class="timeline-item relative pl-4 pr-3 py-2.5 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
+                            <p class="text-xs font-medium text-neutral-400 leading-tight mb-0.5">Summer 2025</p>
+                            <p class="text-base font-semibold text-neutral-900 mb-1">Dagstuhl, Germany</p>
+                            <p class="text-sm text-neutral-600">Selected for the Dagstuhl Summer School on Data Management.</p>
                         </div>
-                        <div class="timeline-item relative pl-4 pr-3 py-2 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
-                            <p class="text-sm text-neutral-700"><strong>2025–Present · SpecScape @ WiNGS Lab</strong> : Building a crowd-sourced radio sensing platform—owning distributed ingestion, real-time stream processing, and backend architecture.</p>
+                        <!-- Featured: SpecScape -->
+                        <div class="timeline-item relative pl-4 pr-3 py-2.5 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
+                            <p class="text-xs font-medium text-neutral-400 leading-tight mb-0.5">2025–Present</p>
+                            <p class="text-base font-semibold text-neutral-900 mb-1">SpecScape @ WiNGS Lab</p>
+                            <p class="text-sm text-neutral-600">Building a crowd-sourced radio sensing platform with Prof. Suman Banerjee—owning distributed ingestion, real-time stream processing, and backend architecture.</p>
                         </div>
+                        <!-- Standard item -->
                         <div class="timeline-item relative pl-4 pr-3 py-2 bg-white border border-neutral-200 rounded hover:border-neutral-400 hover:shadow-sm transition-all cursor-default">
-                            <p class="text-sm text-neutral-700"><strong>2026 May · Graduation & Beyond</strong> : Graduating in May 2026 and exploring full-time roles in systems, infra, and databases.</p>
+                            <p class="text-sm text-neutral-700"><strong>May 2026 · Graduation & Beyond</strong> — Graduating in May 2026 and exploring full-time roles in systems, infrastructure, and databases.</p>
                         </div>
                     </div>
                 </div>
@@ -495,6 +555,87 @@
             </div>
         </section> -->
 
+        <!-- Volunteering Section -->
+        <section id="volunteering" class="py-8 px-6 md:px-12">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6 text-center">Volunteering</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    <!-- Left: Text -->
+                    <div class="p-6 bg-white border border-neutral-200 rounded">
+                        <p class="text-base text-neutral-700 leading-relaxed mb-4">
+                            I served as the <strong>Mentoring Chair for WACM</strong> (Women in Computer Science) at UW–Madison, where I organized mentoring events supporting women and nonbinary students in computing. Building supportive communities matters to me—I've participated in K–12 outreach encouraging young students to explore STEM and received a scholarship to attend <strong>Grace Hopper Celebration</strong> (GHC).
+                        </p>
+                        <a
+                            href="https://wacm.cs.wisc.edu/about.html#:~:text=ceramics%20and%20leatherware.-,Soumya%20Sistla,-Hi!%20I%27m%20Soumya"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 text-sm text-neutral-900 font-medium hover:text-neutral-600 transition-colors"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            WACM website
+                        </a>
+                    </div>
+
+                    <!-- Right: Carousel -->
+                    <div class="carousel-container-community relative rounded overflow-hidden bg-neutral-100" role="region" aria-label="Community and outreach photo carousel">
+                        <div class="carousel-track-community" id="carousel-track-community">
+                            <div class="carousel-slide-community relative bg-neutral-900">
+                                <img
+                                    src="assets/wacm-1.jpg"
+                                    alt="Community event photo 1"
+                                    class="w-full h-80 md:h-96 object-contain"
+                                    loading="lazy"
+                                >
+                                <div class="absolute bottom-0 left-0 right-0 bg-black/70 text-white px-4 py-2">
+                                    <p class="text-sm">WACM Mentoring Event</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide-community relative bg-neutral-900">
+                                <img
+                                    src="assets/wacm-2.jpg"
+                                    alt="Community event photo 2"
+                                    class="w-full h-80 md:h-96 object-contain"
+                                    loading="lazy"
+                                >
+                                <div class="absolute bottom-0 left-0 right-0 bg-black/70 text-white px-4 py-2">
+                                    <p class="text-sm">Grace Hopper Celebration</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <button
+                            id="carousel-community-prev"
+                            class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-md transition-colors"
+                            aria-label="Previous slide"
+                        >
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+
+                        <button
+                            id="carousel-community-next"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-md transition-colors"
+                            aria-label="Next slide"
+                        >
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Indicators -->
+                        <div class="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2" role="tablist" aria-label="Community carousel slides">
+                            <button class="carousel-indicator-community w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-colors" data-index="0" role="tab" aria-label="Go to slide 1" aria-selected="true"></button>
+                            <button class="carousel-indicator-community w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-colors" data-index="1" role="tab" aria-label="Go to slide 2" aria-selected="false"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Personal Interests Section -->
         <section id="personal" class="py-8 px-6 md:px-12 bg-neutral-50">
             <div class="max-w-6xl mx-auto">
@@ -636,85 +777,6 @@
             </div>
         </section>
 
-        <!-- Community & Outreach Gallery Section -->
-        <section id="community-gallery" class="py-8 px-6 md:px-12">
-            <div class="max-w-6xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                    <!-- Left: Text -->
-                    <div class="p-6 bg-white border border-neutral-200 rounded">
-                        <p class="text-base text-neutral-700 leading-relaxed mb-4">
-                            I served as the <strong>Mentoring Chair for WACM</strong> (Women in Computer Science) at UW–Madison, where I organized mentoring events supporting women and nonbinary students in computing. Building supportive communities matters to me—I've participated in K–12 outreach encouraging young students to explore STEM and received a scholarship to attend <strong>Grace Hopper Celebration</strong> (GHC).
-                        </p>
-                        <a
-                            href="https://wacm.cs.wisc.edu/about.html#:~:text=ceramics%20and%20leatherware.-,Soumya%20Sistla,-Hi!%20I%27m%20Soumya"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 text-sm text-neutral-900 font-medium hover:text-neutral-600 transition-colors"
-                        >
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                            WACM website
-                        </a>
-                    </div>
-
-                    <!-- Right: Carousel -->
-                    <div class="carousel-container-community relative rounded overflow-hidden bg-neutral-100" role="region" aria-label="Community and outreach photo carousel">
-                        <div class="carousel-track-community" id="carousel-track-community">
-                            <div class="carousel-slide-community relative bg-neutral-900">
-                                <img
-                                    src="assets/wacm-1.jpg"
-                                    alt="Community event photo 1"
-                                    class="w-full h-80 md:h-96 object-contain"
-                                    loading="lazy"
-                                >
-                                <div class="absolute bottom-0 left-0 right-0 bg-black/70 text-white px-4 py-2">
-                                    <p class="text-sm">WACM Mentoring Event</p>
-                                </div>
-                            </div>
-                            <div class="carousel-slide-community relative bg-neutral-900">
-                                <img
-                                    src="assets/wacm-2.jpg"
-                                    alt="Community event photo 2"
-                                    class="w-full h-80 md:h-96 object-contain"
-                                    loading="lazy"
-                                >
-                                <div class="absolute bottom-0 left-0 right-0 bg-black/70 text-white px-4 py-2">
-                                    <p class="text-sm">Grace Hopper Celebration</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Controls -->
-                        <button
-                            id="carousel-community-prev"
-                            class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-md transition-colors"
-                            aria-label="Previous slide"
-                        >
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
-
-                        <button
-                            id="carousel-community-next"
-                            class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-md transition-colors"
-                            aria-label="Next slide"
-                        >
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-
-                        <!-- Indicators -->
-                        <div class="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2" role="tablist" aria-label="Community carousel slides">
-                            <button class="carousel-indicator-community w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-colors" data-index="0" role="tab" aria-label="Go to slide 1" aria-selected="true"></button>
-                            <button class="carousel-indicator-community w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-colors" data-index="1" role="tab" aria-label="Go to slide 2" aria-selected="false"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Floating Contact Button -->
@@ -765,7 +827,7 @@
                     LinkedIn
                 </a>
                 <a
-                    href="https://drive.google.com/file/d/160DBzu7eHlLPwBRZ2SoSk2qqDV7GfN8-/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1vf6i_JZ0KkRxW7Cls7aGUeOryqVANPXx/view?usp=sharing"
                     class="flex items-center gap-2 text-sm text-neutral-700 hover:text-neutral-900 transition-colors"
                 >
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
